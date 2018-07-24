@@ -1,12 +1,23 @@
 {
-  "name": "greeter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "greeter",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start":
+			"concurrently --kill-others-on-fail \"parcel src/index.html\" \"sleep 10 && electron src/main.js\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"concurrently": "^3.6.0",
+		"node-sass": "^4.9.2",
+		"parcel-bundler": "^1.9.7"
+	},
+	"dependencies": {
+		"electron": "^1.7.15",
+		"lit-html": "^0.10.2",
+		"opensans-npm-webfont": "^1.0.0"
+	}
 }
