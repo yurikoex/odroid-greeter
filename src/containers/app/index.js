@@ -1,5 +1,7 @@
 import { html } from 'lit-html'
 
-export default state => html`<div class="app">
-  <div class="online">Status: ${state.online ? '☑️' : '❌'}</div>
+export default ({ online }) => html`<div class="app">
+  <div class="${online ? 'online' : 'offline'}">
+    ${online ? '☑️' : '❌'} Network is ${online ? 'ONLINE' : 'OFFLINE'}
+  </div>
 </div>`

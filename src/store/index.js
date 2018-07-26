@@ -1,5 +1,5 @@
 export const createStore = reducers => {
-	let state = {}
+	const state = {}
 	const subscribers = []
 
 	const processReducers = action => {
@@ -9,7 +9,7 @@ export const createStore = reducers => {
 				state[key] = fn({ state: state[key], action })
 			}
 		})
-		subscribers.forEach(fn => fn())
+		subscribers.forEach(fn => fn(state))
 	}
 
 	processReducers({ type: 'INIT' })

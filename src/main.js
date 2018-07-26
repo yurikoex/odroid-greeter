@@ -17,7 +17,7 @@ function initialize() {
 
 		mainWindow.maximize()
 
-		mainWindow.webContents.openDevTools()
+		//mainWindow.webContents.openDevTools()
 
 		mainWindow.on('closed', () => {
 			mainWindow = null
